@@ -55,6 +55,7 @@
 
 /* Container for image text */
 .caption-container {
+  display: none;
   text-align: center;
   background-color: #c00d0d;
   opacity: 0.6;
