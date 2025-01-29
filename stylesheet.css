@@ -56,8 +56,9 @@
 /* Container for image text */
 .caption-container {
   text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
+  background-color: #c00d0d;
+  opacity: 0.6;
+  padding: 2px 10px;
   color: white;
 }
 
