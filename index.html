@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <title>Nice Food Culture Homepage</title>
+</head>
+<body>
+    <div class="main-1-wrapper">
+        <header>
+          <h1>Nice Food Culture Homepage</h1>
+        </header>
+            <div class="navbar">
+              <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <nav>
+                <ul class="nav-links">
+                  <li><a href="./main.html">Home</a></li>
+                  <li><a href="./foodculturestory.html">Food Culture Story</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
+                </ul>
+              </nav>
+              <script>
+                function toggleMenu() {
+                  document.querySelector('.nav-links').classList.toggle('active');
+                }
+              </script>
+            </div>
+            <!-- Container for the image gallery -->
+          <div class="container-slideshow-main">
+           <!-- Slideshow container -->
+           <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+              <img src="./images/P1263400.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+              <img src="./images/IMG_9531.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+              <img src="./images/IMG_9538_jpg.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+              <img src="./images/P1293445.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+              <img src="./images/IMG_0041.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+              <img src="./images/IMG_2691.jpg " style="width:100%">
+          </div>
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <!-- Image text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+          <!-- Thumbnail images -->
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="./images/P1263400.jpg" style="width:100%" onclick="currentSlide(1)" alt="Birds above people sitting on the promenade des anglais beach, Nice, France">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./images/IMG_9531.jpg" style="width:100%" onclick="currentSlide(2)" alt="Orange Sunset in Nice">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./images/IMG_9538_jpg.jpg" style="width:100%" onclick="currentSlide(3)" alt="Old Italian blue car and a man smiling, Gairault, Nice">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./images/P1293445.jpg" style="width:100%" onclick="currentSlide(4)" alt="Oranges and apple captured on the Liberation Market, Nice, France">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./images/IMG_0041.jpg" style="width:100%" onclick="currentSlide(5)" alt="Purple sunset with a rainbow reflecting on the beach, Nice, France">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./images/IMG_2691.jpg " style="width:100%" onclick="currentSlide(6)" alt="Caroussel on Garibaldi, Nice France">
+            </div>
+          </div>
+        </div>
+          <script>
+            let slideIndex = 1;
+          showSlides(slideIndex);
+
+          // Next/previous controls
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          // Thumbnail image controls
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+          } 
+          </script>
+        <h2>Introduction</h2>
+        <p>
+            Nice is located in the South of France, in history the city belonged to Italy before France.
+            It was a county of Italy, with its own language,
+            the border between Nice and France was drawn by the Var
+            a river that comes from the South Alpes.
+            It has always been influenced by the French culture
+            as also the election were written in French and Nissart (italian slang).
+            Here on this webpage we are gonna focus on the food culture
+            and make you discover the local food specialties that you can taste in Restaurants or kiosk around the city.
+        </p>
+        <div class="randomfoodcardgame">
+            <h3>
+                Choose a card and see which food specialty you will
+                try next with Nice's best restaurants locations.
+            </h3>
+            <p>
+                When you choose a card a list of the best restaurants
+                in town will pop up
+            </p>
+        </div>
+        <button id="draw-card"> Draw a card</button>
+        <script>
+            // define the deck of card
+            const specialty = ['pissaladiere', 'La socca', 'Lou pan-bagnat', 'La dauba nissarda', 'Les petits farcis', 'sea food', 'pizza', 'italian food'];
+            const location = ['Chez teresa', 'Chez Pipo', 'Felix', 'Du Gesu', 'lou pilha leva', 'cafe de turin', 'quebec', 'la terverne massena', 'favola', 'voglia', 'flower market'];
+                        
+            // array to hold the combined cards
+            const specialtyLocationCards = [];
+            
+            for (let i=0; i < Math.min(specialty.length, location.length); i++){
+                specialtyLocationCards.push({
+                specialty: specialty[i],
+                location: location[i],
+                });
+            }
+            
+            // handle remaining locations
+            if (specialty.length > location.length){
+                for (let i = specialty.length; i < location.length; i++) {
+                    specialtyLocationCards.push({
+                    dish: "dish is not assigned",
+                    location: location[i],
+                    });
+                    }
+            }
+            console.log(specialtyLocationCards);
+            
+            function createDeck() {
+                deck = [];
+                specialty.forEach(specialty => {
+                                    location.forEach(location => {
+                                        const card = {location: "chez teresa", specialty: "pissaladiere" };
+                                        deck.push(card);
+                                                });
+                });
+            }
+
+            function shuffle(deck) {
+
+            }
+        </script>
+        
+    </div>
+</body>
+</html>
