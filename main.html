@@ -118,16 +118,17 @@
             captionText.innerHTML = dots[slideIndex-1].alt;
           } 
           </script>
-        <h2>Introduction</h2>
+        <h2>Nissa la bella</h2>
         <p>
-            Nice is located in the South of France, in history the city belonged to Italy before France.
+            Nice is located in the South of France.
             It was a county of Italy, with its own language,
             the border between Nice and France was drawn by the Var
             a river that comes from the South Alpes.
             It has always been influenced by the French culture
             as also the election were written in French and Nissart (italian slang).
-            Here on this webpage we are gonna focus on the food culture
-            and make you discover the local food specialties that you can taste in Restaurants or kiosk around the city.
+            <br>
+            Here on this webpage we are focusing on the food culture. Offering you the rich culture of the Nice cooking.
+            Take a look on the new interactive page and see what you'll try next.
         </p>
         <div class="randomfoodcardgame">
             <h3>
@@ -139,48 +140,6 @@
                 in town will pop up
             </p>
         </div>
-        <button id="draw-card"> Draw a card</button>
-        <script>
-            // define the deck of card
-            const specialty = ['pissaladiere', 'La socca', 'Lou pan-bagnat', 'La dauba nissarda', 'Les petits farcis', 'sea food', 'pizza', 'italian food'];
-            const location = ['Chez teresa', 'Chez Pipo', 'Felix', 'Du Gesu', 'lou pilha leva', 'cafe de turin', 'quebec', 'la terverne massena', 'favola', 'voglia', 'flower market'];
-                        
-            // array to hold the combined cards
-            const specialtyLocationCards = [];
-            
-            for (let i=0; i < Math.min(specialty.length, location.length); i++){
-                specialtyLocationCards.push({
-                specialty: specialty[i],
-                location: location[i],
-                });
-            }
-            
-            // handle remaining locations
-            if (specialty.length > location.length){
-                for (let i = specialty.length; i < location.length; i++) {
-                    specialtyLocationCards.push({
-                    dish: "dish is not assigned",
-                    location: location[i],
-                    });
-                    }
-            }
-            console.log(specialtyLocationCards);
-            
-            function createDeck() {
-                deck = [];
-                specialty.forEach(specialty => {
-                                    location.forEach(location => {
-                                        const card = {location: "chez teresa", specialty: "pissaladiere" };
-                                        deck.push(card);
-                                                });
-                });
-            }
-
-            function shuffle(deck) {
-
-            }
-        </script>
-        
     </div>
 </body>
 </html>

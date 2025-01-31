@@ -129,58 +129,6 @@
             Here on this webpage we are gonna focus on the food culture
             and make you discover the local food specialties that you can taste in Restaurants or kiosk around the city.
         </p>
-        <div class="randomfoodcardgame">
-            <h3>
-                Choose a card and see which food specialty you will
-                try next with Nice's best restaurants locations.
-            </h3>
-            <p>
-                When you choose a card a list of the best restaurants
-                in town will pop up
-            </p>
-        </div>
-        <button id="draw-card"> Draw a card</button>
-        <script>
-            // define the deck of card
-            const specialty = ['pissaladiere', 'La socca', 'Lou pan-bagnat', 'La dauba nissarda', 'Les petits farcis', 'sea food', 'pizza', 'italian food'];
-            const location = ['Chez teresa', 'Chez Pipo', 'Felix', 'Du Gesu', 'lou pilha leva', 'cafe de turin', 'quebec', 'la terverne massena', 'favola', 'voglia', 'flower market'];
-                        
-            // array to hold the combined cards
-            const specialtyLocationCards = [];
-            
-            for (let i=0; i < Math.min(specialty.length, location.length); i++){
-                specialtyLocationCards.push({
-                specialty: specialty[i],
-                location: location[i],
-                });
-            }
-            
-            // handle remaining locations
-            if (specialty.length > location.length){
-                for (let i = specialty.length; i < location.length; i++) {
-                    specialtyLocationCards.push({
-                    dish: "dish is not assigned",
-                    location: location[i],
-                    });
-                    }
-            }
-            console.log(specialtyLocationCards);
-            
-            function createDeck() {
-                deck = [];
-                specialty.forEach(specialty => {
-                                    location.forEach(location => {
-                                        const card = {location: "chez teresa", specialty: "pissaladiere" };
-                                        deck.push(card);
-                                                });
-                });
-            }
-
-            function shuffle(deck) {
-
-            }
-        </script>
-        
-    </div>
+      </div>
 </body>
 </html>
