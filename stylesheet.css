@@ -239,8 +239,8 @@ textarea {
 
 /* cardgame */
 :root{
-  --card-width:157px;
-  --card-height:220px;
+  --card-width:465px;
+  --card-height:465px;
 
 }
 .card-container{
