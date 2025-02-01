@@ -7,6 +7,26 @@
     <title>Hunt the Socca</title>
 </head>
 <body>
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="./main.html">Home</a></li>
+            <li><a href="./foodculturestory.html">Food Culture Story</a></li>
+            <li><a href="./cardgame.html">Hunt the Socca - A Card game</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <script>
+          function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+          }
+        </script>
+    </div>
     <header>
         <div class="header-title-container">
             <h1>Hunt the Socca</h1>
