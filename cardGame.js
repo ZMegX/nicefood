@@ -83,7 +83,10 @@ function createCard(cardItem){
     addChildElement(cardElem, cardInner);
 
     //add card element as child element to appropriate grid cell
-    addCardToGridCell(card);
+    addCardToGridCell(cardItem);
+
+    //append to container
+    cardContainerElem.appendChild(cardElem);
 
 
 };
