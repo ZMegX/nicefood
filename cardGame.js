@@ -1,4 +1,6 @@
-
+document.addEventListener('DOMContentLoaded', () => {
+    createCards();
+});
 const cardObjectDefinitions = [
     {id:1, imgPath: '/images/front-card-1-zucchini-flower'},
     {id:2, imgPath: '/images/front-card-2-petits-farcis'},
@@ -9,7 +11,6 @@ const cardObjectDefinitions = [
 ];
 
 const backCardSrc = '/images/card-back-hunt-the-socca.png';
-
 const cardContainerElem = document.querySelector('.card-container');
 
 /* <div class="card-container">
@@ -37,20 +38,13 @@ function createCard(cardItem){
     const cardInner = createElement('div');
     const cardFront = createElement('div');
     const cardBack = createElement('div');
+    const cardFrontImg = createElement('img');     //create front img element
+    const cardBackImg = createElement('img');      //create back img element
 
-    //create front and back img element
-    const cardFrontImg = createElement('img');
-    const cardBackImg = createElement('img');
-
-    //add class and id to card element
-    addClassToElement(cardElem, 'card');
-    addIdToElement(cardElem, cardItem.id);
-
-    //add class to inner card element
-    addClassToElement(cardInner, 'card-inner');
-
-    //add class to front card element
-    addClassToElement(cardFront, 'card-front');
+    addClassToElement(cardElem, 'card');     //add class and id to card element
+    addIdToElement(cardElem, cardItem.id);          //add id to card element
+    addClassToElement(cardInner, 'card-inner');    //add class to inner card element
+    addClassToElement(cardFront, 'card-front');    //add class to front card element
 
     //add class to back card element
     addClassToElement(cardBack, 'card-back');
@@ -86,7 +80,7 @@ function createCard(cardItem){
     addCardToGridCell(cardItem);
 
     //append to container
-    cardContainerElem.appendChild(cardElem);
+    cardElem.appendChild(cardElem);
 
 
 };
@@ -103,8 +97,8 @@ function addIdToElement(elem, id){
 function addSrcToImageElem(imgElem, src){
     imgElem.src = src;
 }
-function addChildElement(parentElem, childElem){
-    parentElem.appendChild(childElem);
+function addChildElement(cardElem, childElem){
+    cardElem.appendChild(childElem);
 }
 function addCardToGridCell(card){
     const cardPositionClassName = mapCardIdToGridcell(card);
