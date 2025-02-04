@@ -40,7 +40,7 @@ function createCard(cardItem){
 
     //create front and back img element
     const cardFrontImg = createElement('img');
-    const cardBacktImg = createElement('img');
+    const cardBackImg = createElement('img');
 
     //add class and id to card element
     addClassToElement(cardElem, 'card');
@@ -56,10 +56,10 @@ function createCard(cardItem){
     addClassToElement(cardBack, 'card-back');
 
     //add src and attribut to img element - back card
-    addSrcToImageElem(cardBack, backCardSrc);
+    addSrcToImageElem(cardBackImg, backCardSrc);
 
     //add src and attribut to img element - front card
-    addSrcToImageElem(cardFront, cardItem.imgPath);
+    addSrcToImageElem(cardFrontImg, cardItem.imgPath);
 
     //assign class to back image of back card
     addClassToElement(cardBack, 'card-back-img');
