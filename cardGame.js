@@ -62,10 +62,10 @@ function createCard(cardItem){
     addSrcToImageElem(cardFrontImg, cardItem.imgPath);
 
     //assign class to back image of back card
-    addClassToElement(cardBack, 'card-back-img');
+    addClassToElement(cardBackImg, 'card-back-img');
 
     //assign class to front image of front card
-    addClassToElement(cardFront, 'front-card-img');
+    addClassToElement(cardFrontImg, 'front-card-img');
 
     //add back image element as child element to back card element
     addChildElement(cardBack, cardBackImg);
