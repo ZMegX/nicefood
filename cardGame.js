@@ -103,3 +103,30 @@ function addSrcToImageElem(imgElem, src){
 function addChildElement(parentElem, childElem){
     parentElem.appendChild(childElem);
 }
+function addCardToGridCell(card){
+    const cardPositionClassName = mapCardIdToGridcell(card);
+    const cardPosElem = document.querySelector(cardPositionClassName);
+
+    addChildElement(cardPosElem, card);
+
+};
+function mapCardIdToGridcell(cardItem){
+    if(cardItem.id == 1){
+        return '.card-pos-a'
+    }
+    else if(cardItem.id == 2){
+        return '.card-pos-b' //defined in CSS later
+    }
+    else if(cardItem.id ==3){
+        return '.card-pos-c'
+    }
+    else if(cardItem.id == 4){
+        return '.card-pos-d'
+    }
+    else if(cardItem.id == 5){
+        return '.card-pos-e'
+    }
+    else if(cardItem.id == 6){
+        return '.card-pos-f'
+    }
+}
