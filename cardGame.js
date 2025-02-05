@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    createCard();
-});
+document.addEventListener('DOMContentLoaded', createCard);
 const cardObjectDefinitions = [
     {id:1, imgPath: './images/front-card-1-zucchini-flower-flip-horizontal.png'},
     {id:2, imgPath: '/images/front-card-2-petits-farcis.png'},
@@ -34,15 +32,15 @@ function createCard(){
 
 function createCard(cardItem){
     //create card div 
-    const cardElem = createElement('div');
-    const cardInner = createElement('div');
-    const cardFront = createElement('div');
-    const cardBack = createElement('div');
-    const cardFrontImg = createElement('img');     //create front img element
-    const cardBackImg = createElement('img');      //create back img element
+    const cardElem = document.createElement('div');
+    const cardInner = document.createElement('div');
+    const cardFront = document.createElement('div');
+    const cardBack = document.createElement('div');
+    const cardFrontImg = document.createElement('img');     //create front img element
+    const cardBackImg = document.createElement('img');      //create back img element
 
     addClassToElement(cardElem, 'card');     //add class and id to card element
-    addIdToElement(cardElem, cardItem.id);          //add id to card element
+    addIdToElement(cardElem, 'cardItem.id');          //add id to card element
     addClassToElement(cardInner, 'card-inner');    //add class to inner card element
     addClassToElement(cardFront, 'card-front');    //add class to front card element
 
@@ -80,7 +78,7 @@ function createCard(cardItem){
     addCardToGridCell(cardItem);
 
     //append to container
-    cardElem.appendChild(cardElem);
+    cardContainerElem.appendChild(cardElem);
 
 
 };
@@ -91,9 +89,9 @@ function createElement(elemType){
 function addClassToElement(elem, className){
     elem.classList.add(className);
 };
-function addIdToElement(elem, id){
-    elem.id = id;
-}
+function addIdToElement(cardItem, id){
+    cardItem.setAttribute("id", id);
+};
 function addSrcToImageElem(imgElem, src){
     imgElem.src = src;
 }
