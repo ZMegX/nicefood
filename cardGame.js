@@ -102,7 +102,7 @@ function addCardToGridCell(card){
     const cardPositionClassName = mapCardIdToGridcell(card);
     const cardPosElem = document.querySelector(cardPositionClassName);
 
-    addChildElement(cardPosElem, card);
+    addChildElement(cardPosElem, cardElem);
 
 };
 function mapCardIdToGridcell(cardItem){
