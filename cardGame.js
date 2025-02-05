@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     createCards();
 });
 const cardObjectDefinitions = [
-    {id:1, imgPath: '/images/front-card-1-zucchini-flower'},
-    {id:2, imgPath: '/images/front-card-2-petits-farcis'},
-    {id:3, imgPath: '/images/front-card-3-socca'},
-    {id:4, imgPath: '/images/front-card-4-pan-bagnat'},
-    {id:5, imgPath: '/images/front-card-5-joker'},
-    {id:6, imgPath: '/images/front-card-6-pissaladiere'},
+    {id:1, imgPath: './images/front-card-1-zucchini-flower-flip-horizontal.png'},
+    {id:2, imgPath: '/images/front-card-2-petits-farcis.png'},
+    {id:3, imgPath: '/images/front-card-3-socca.png'},
+    {id:4, imgPath: '/images/front-card-4-pan-bagnat.png'},
+    {id:5, imgPath: '/images/front-card-5-joker.png'},
+    {id:6, imgPath: '/images/front-card-6-pissaladiere.png'},
 ];
 
 const backCardSrc = '/images/card-back-hunt-the-socca.png';
