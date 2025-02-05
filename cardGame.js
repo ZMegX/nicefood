@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    createCards();
+    createCard();
 });
 const cardObjectDefinitions = [
     {id:1, imgPath: './images/front-card-1-zucchini-flower-flip-horizontal.png'},
@@ -26,9 +26,9 @@ const cardContainerElem = document.querySelector('.card-container');
 </div>
 </div> */
 
-createCards();
+createCard();
 
-function createCards(){
+function createCard(){
     cardObjectDefinitions.forEach((cardItem)=>{createCard(cardItem)});
 }
 
@@ -97,8 +97,8 @@ function addIdToElement(elem, id){
 function addSrcToImageElem(imgElem, src){
     imgElem.src = src;
 }
-function addChildElement(cardContainerElem, childElem){
-    cardContainerElem.appendChild(childElem);
+function addChildElement(cardContainerElem, cardItem){
+    cardContainerElem.appendChild(cardItem);
 }
 function addCardToGridCell(card){
     const cardPositionClassName = mapCardIdToGridcell(card);
