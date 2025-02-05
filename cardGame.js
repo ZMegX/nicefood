@@ -25,10 +25,9 @@ const cardContainerElem = document.querySelector('.card-container');
 </div> */
 
 createCard();
-
 function createCard(){
-    cardObjectDefinitions.forEach((cardItem)=>{createSingle(cardItem)});
-}
+    cardObjectDefinitions.forEach((cardItem)=>{createSingleCard(cardItem)});
+};
 
 function createSingleCard(cardItem){
     //create card div 
@@ -78,7 +77,7 @@ function createSingleCard(cardItem){
     addCardToGridCell(cardElem);
 
     //append to container
-    parentElem.appendChild(cardElem);
+    cardElem.appendChild(cardElem);
 
 
 };
