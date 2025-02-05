@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', createCard);
+document.addEventListener('DOMContentLoaded', createCards);
 const cardObjectDefinitions = [
     {id:1, imgPath: './images/front-card-1-zucchini-flower-flip-horizontal.png'},
     {id:2, imgPath: '/images/front-card-2-petits-farcis.png'},
@@ -26,7 +26,7 @@ const cardContainerElem = document.querySelector('.card-container');
 
 createCard();
 
-function createCard(){
+function createCards(){
     cardObjectDefinitions.forEach((cardItem)=>{createCard(cardItem)});
 }
 
@@ -40,7 +40,7 @@ function createCard(cardItem){
     const cardBackImg = document.createElement('img');      //create back img element
 
     addClassToElement(cardElem, 'card');     //add class and id to card element
-    addIdToElement(cardElem, 'cardItem.id');          //add id to card element
+    addIdToElement(cardElem, cardItem.id);          //add id to card element
     addClassToElement(cardInner, 'card-inner');    //add class to inner card element
     addClassToElement(cardFront, 'card-front');    //add class to front card element
 
@@ -51,7 +51,7 @@ function createCard(cardItem){
     addSrcToImageElem(cardBackImg, backCardSrc);
 
     //add src and attribut to img element - front card
-    addSrcToImageElem(cardFrontImg, cardFrontImg.imgPath);
+    addSrcToImageElem(cardFrontImg, cardItem.imgPath);
 
     //assign class to back image of back card
     addClassToElement(cardBackImg, 'card-back-img');
@@ -75,7 +75,7 @@ function createCard(cardItem){
     addChildElement(cardElem, cardInner);
 
     //add card element as child element to appropriate grid cell
-    addCardToGridCell(cardItem);
+    addCardToGridCell(cardElem);
 
     //append to container
     cardContainerElem.appendChild(cardElem);
@@ -98,30 +98,30 @@ function addSrcToImageElem(imgElem, src){
 function addChildElement(cardContainerElem, cardItem){
     cardContainerElem.appendChild(cardItem);
 }
-function addCardToGridCell(card){
-    const cardPositionClassName = mapCardIdToGridcell(card);
+function addCardToGridCell(cardElem){
+    const cardPositionClassName = mapCardIdToGridcell(cardElem);
     const cardPosElem = document.querySelector(cardPositionClassName);
 
     addChildElement(cardPosElem, cardElem);
 
 };
-function mapCardIdToGridcell(cardItem){
-    if(cardItem.id == 1){
+function mapCardIdToGridcell(cardElem){
+    if(parseInt(cardElem.id) === 1){
         return '.card-pos-a'
     }
-    else if(cardItem.id == 2){
+    else if(parseInt(cardElem.id) === 2){
         return '.card-pos-b' //defined in CSS later
     }
-    else if(cardItem.id ==3){
+    else if(parseInt(cardElem.id) ===3){
         return '.card-pos-c'
     }
-    else if(cardItem.id == 4){
+    else if(parseInt(cardElem.id) === 4){
         return '.card-pos-d'
     }
-    else if(cardItem.id == 5){
+    else if(parseInt(cardElem.id) === 5){
         return '.card-pos-e'
     }
-    else if(cardItem.id == 6){
+    else if(parseInt(cardElem.id) === 6){
         return '.card-pos-f'
     }
-}
+};
