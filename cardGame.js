@@ -27,7 +27,7 @@ const cardContainerElem = document.querySelector('.card-container');
 createCard();
 
 function createCard(){
-    cardObjectDefinitions.forEach((cardItem)=>{createSingleCard(cardItem)});
+    cardObjectDefinitions.forEach((cardItem)=>{createSingle(cardItem)});
 }
 
 function createSingleCard(cardItem){
@@ -78,7 +78,7 @@ function createSingleCard(cardItem){
     addCardToGridCell(cardElem);
 
     //append to container
-    cardContainerElem.appendChild(cardElem);
+    parentElem.appendChild(cardElem);
 
 
 };
@@ -95,8 +95,8 @@ function addIdToElement(cardItem, id){
 function addSrcToImageElem(imgElem, src){
     imgElem.src = src;
 }
-function addChildElement(cardContainerElem, cardItem){
-    cardContainerElem.appendChild(cardItem);
+function addChildElement(cardElem, cardItem){
+    parentElem.appendChild(cardItem);
 }
 function addCardToGridCell(cardElem){
     const cardPositionClassName = mapCardIdToGridcell(cardElem);
