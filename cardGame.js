@@ -97,8 +97,8 @@ function addIdToElement(elem, id){
 function addSrcToImageElem(imgElem, src){
     imgElem.src = src;
 }
-function addChildElement(cardElem, childElem){
-    cardElem.appendChild(childElem);
+function addChildElement(cardContainerElem, childElem){
+    cardContainerElem.appendChild(childElem);
 }
 function addCardToGridCell(card){
     const cardPositionClassName = mapCardIdToGridcell(card);
