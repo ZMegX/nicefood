@@ -154,12 +154,13 @@ nav a:hover {
 
 .row:after {
   content: "";
-  display: table;
+  display: none;
   clear: both;
 }
 
 /* Six columns side by side */
 .column {
+  display: none;
   float: left;
   width: 16.66%;
 }
