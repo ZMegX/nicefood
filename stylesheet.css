@@ -175,6 +175,28 @@ nav a:hover {
   opacity: 1;
 }
 
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+
+}
+
+.animate-on-scroll{
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: all 0.4s ease-out;
+  transition-delay: 0.2s;
+
+}
+
+.animate{
+  opacity: 1;
+  transform: translateX(0);
+  
+}
 
 /* contact-form */
 .contact-form-container {
