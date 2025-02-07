@@ -118,6 +118,14 @@
             dots[slideIndex-1].className += " active";
             captionText.innerHTML = dots[slideIndex-1].alt;
           } 
+          
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowRight") {
+              plusSlides(1);
+            } else if (event.key === "ArrowLeft") {
+              plusSlides(-1);
+            }
+          });
           </script>
         <h2>Nice, France</h2>
         <p>
