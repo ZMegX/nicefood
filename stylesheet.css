@@ -268,9 +268,16 @@ textarea {
 }
 .card-container{
   margin-top: 35px;
-  position: relative;
+  /* position: relative; */
+  display: grid;
+  grid-template-areas: 
+  "card-pos-a" "card-pos-b" "card-pos-c"
+  "card-pos-d" "card-pos-e" "card-pos-f";
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  }
 
-}
 .card{
   position:absolute;
   height:var(--card-height);
