@@ -92,10 +92,18 @@ nav a:hover {
 /* Position the image container (needed to position the left and right arrows) */
 .container-slideshow-main {
   position: relative;
+  width: 80%;
+}
+.container-photo-main {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+
 }
 
 /* Hide the images by default */
-.mySlides {
+.mySlides-main {
   display: none;
 }
 
@@ -124,13 +132,13 @@ nav a:hover {
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 1px 0 0 1px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(71, 69, 69, 0.8);
 }
 
 /* Number text (1/3 etc) */
@@ -179,7 +187,7 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   flex-direction: column;
 
 }
@@ -268,14 +276,15 @@ textarea {
 }
 .card-container{
   margin-top: 35px;
-  /* position: relative; */
+  position: relative;
   display: grid;
-  grid-template-areas: 
+  /*need to work on the positioning
+   grid-template-areas: 
   "card-pos-a" "card-pos-b" "card-pos-c"
   "card-pos-d" "card-pos-e" "card-pos-f";
   grid-gap: 10px;
   background-color: #fff;
-  color: #444;
+  color: #444; */
   }
 
 .card{
