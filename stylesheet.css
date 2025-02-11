@@ -1,8 +1,16 @@
 * {box-sizing:border-box}
 @media only screen and  (max-width: 481px) {
 img{
-  width: 18em;
+  width: 100%;
 }
+.main-1-wrapper{
+  grid-template-columns: 1fr;
+ 
+ }
+ header{
+  display: flex;
+  justify-content: center;
+ }
 nav {
   margin: 0;
 
@@ -98,13 +106,14 @@ nav a:hover {
   position: relative;
   width: 80%;
 }
-.container-photo-main, .introduction-main {
+.container-photo-main {
   display: flex;
   justify-content: center;
   position: relative;
   width: 80%;
   margin-bottom: 1.5em;
   margin-top: 1.5em;
+  padding-top: 50px;
 
 }
 /* .introduction-main {
@@ -412,6 +421,8 @@ textarea {
     position: relative;
     width: 80%;
     margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    padding-top: 50px;
   
   }
   /* Hide the images by default */
