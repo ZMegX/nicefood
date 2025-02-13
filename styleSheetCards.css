@@ -1,0 +1,36 @@
+.card-container {
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-areas:
+        "card-pos-a card-pos-b card-pos-c"
+        "card-pos-d card-pos-e card-pos-f";
+    grid-template-rows: 465px 465fr 465px;
+    grid-template-columns: auto;
+
+}
+
+.card-pos-a {
+    grid-area: "card-pos-a";
+
+}
+.card-pos-b {
+    grid-area: "card-pos-b";
+    
+}
+.card-pos-c {
+    grid-area: "card-pos-c";
+    
+}
+.card-pos-d {
+    grid-area: "card-pos-d";
+    
+}
+.card-pos-e {
+    grid-area: "card-pos-e";
+    
+}
+.card-pos-f {
+    grid-area: "card-pos-f";
+    
+}
