@@ -44,14 +44,14 @@ nav a:link {
   font-style: normal;
   font-size: 1em;
   gap: 1rem;
-  color: white;
+  color: yellow;
   
 }
 nav a:visited {
-  color: #F5CE1A;
+  color: white;
 }
 nav a:hover {
-  color: #F5CE1A;
+  color: white;
 }
 .nav-links {
   display: flex;
@@ -66,7 +66,7 @@ nav a:hover {
 .bar {
   width: 30px;
   height: 3px;
-  background-color: #bb2c49;
+  background-color: #20f23d;
   transition: 0.3s;
 }
 .navbar {
@@ -284,64 +284,7 @@ textarea {
   background-color: #218838;
 }
 
-/* cardgame */
-:root{
-  --card-width:465px;
-  --card-height:465px;
-
-}
-.card-container{
-  margin-top: 35px;
-  position: relative;
-  display: grid;
-  /*need to work on the positioning
-   grid-template-areas: 
-  "card-pos-a" "card-pos-b" "card-pos-c"
-  "card-pos-d" "card-pos-e" "card-pos-f";
-  grid-gap: 10px;
-  background-color: #fff;
-  color: #444; */
-  }
-
-.card{
-  position:absolute;
-  height:var(--card-height);
-  width:var(--card-width);
-  perspective: 1000px;
-
-}
-.card-inner{
-  position: relative;
-  width:100%;
-  height:100%;
-  /* text-align: center; */
-  transition: transform 0.4s;
-  transform-style: preserve-3d;
-  transform-origin: center;
-
-}
-.card-front, .card-back{
-  position:absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-
-}
-.card-img{
-  height:100%;
-}
-.card-back{
-  transform:rotateY(0deg);
-
-}
-.card:hover .card-inner{
-  transform:rotateY(180deg);
-}
-.card-inner:hover .card-back {
-  transform: rotateY(180deg);  /* Ensure back face is visible when hovering */
-}
-}
+} 
 
 @media only screen and (min-width: 465px) {
   body {
