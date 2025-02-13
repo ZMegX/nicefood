@@ -34,38 +34,17 @@ function createSingleCard(cardItem){
     addClassToElement(cardInner, 'card-inner');    //add class to inner card element
     addClassToElement(cardFront, 'card-front');    //add class to front card element
 
-    //add class to back card element
-    addClassToElement(cardBack, 'card-back');
-
-    //add src and attribut to img element - back card
-    addSrcToImageElem(cardBackImg, backCardSrc);
-
-    //add src and attribut to img element - front card
-    addSrcToImageElem(cardFrontImg, cardItem.imgPath);
-
-    //assign class to back image of back card
-    addClassToElement(cardBackImg, 'card-back-img');
-
-    //assign class to front image of front card
-    addClassToElement(cardFrontImg, 'front-card-img');
-
-    //add back image element as child element to back card element
-    addChildElement(cardBack, cardBackImg);
-
-    //add back image element as child element to front card element
-    addChildElement(cardFront, cardFrontImg);
-
-    //add front card element as child element to inner card element
-    addChildElement(cardInner, cardFront);
-
-    //add back card element as child element to inner card element
-    addChildElement(cardInner, cardBack);
-
-    //add inner card element as child element to a card element
-    addChildElement(cardElem, cardInner);
-
-    //add card element as child element to appropriate grid cell
-    addCardToGridCell(cardElem);
+    addClassToElement(cardBack, 'card-back');       //add class to back card element
+    addSrcToImageElem(cardBackImg, backCardSrc);    //add src and attribut to img element - back card
+    addSrcToImageElem(cardFrontImg, cardItem.imgPath); //add src and attribut to img element - front card
+    addClassToElement(cardBackImg, 'card-back-img');    //assign class to back image of back card
+    addClassToElement(cardFrontImg, 'front-card-img');  //assign class to front image of front card
+    addChildElement(cardBack, cardBackImg);             //add back image element as child element to back card element
+    addChildElement(cardFront, cardFrontImg);           //add back image element as child element to front card element
+    addChildElement(cardInner, cardFront);              //add front card element as child element to inner card element
+    addChildElement(cardInner, cardBack);               //add back card element as child element to inner card element
+    addChildElement(cardElem, cardInner);               //add inner card element as child element to a card element
+    addCardToGridCell(cardElem);                        //add card element as child element to appropriate grid cell
 
     //append to container
     cardContainerElem.appendChild(cardElem);
@@ -89,9 +68,9 @@ function addChildElement(cardContainerElem, cardItem){
     cardContainerElem.appendChild(cardItem);
 }
 function addCardToGridCell(cardElem){
-    //const cardPositionClassName = mapCardIdToGridcell(cardElem);
-    //console.log(cardPositionClassName);
-    //const cardPosElem = document.querySelector(cardPositionClassName);
+    const cardPositionClassName = mapCardIdToGridcell(cardElem);
+    console.log(cardPositionClassName);
+    const cardPosElem = document.querySelector(cardPositionClassName);
 
     //console.log(cardPosElem);
 
