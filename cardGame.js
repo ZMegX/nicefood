@@ -27,10 +27,19 @@ function loadGame(){
 };
 
 function startGame(){
-    initializeNewGame()
+    initializeNewGame();
+    startRound();
 };
 
 function initializeNewGame(){
+
+};
+
+function startRound(){
+    initializeNewRound();
+};
+
+function initializeNewRound(){
 
 };
 
