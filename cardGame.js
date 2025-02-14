@@ -8,14 +8,31 @@ const cardObjectDefinitions = [
     {id:5, imgPath: '/images/front-card-5-joker.png'},
     {id:6, imgPath: '/images/front-card-6-pissaladiere.png'},
 ];
+let cards = [];
 
 const backCardSrc = '/images/card-back-hunt-the-socca.png';
 const cardContainerElem = document.querySelector('.card-container');
 
-createCard();
+const playGameButtonElem = document.querySelector('#playGame'); 
+
+loadGame();
+function loadGame(){
+    createCard();
+
+    cards = document.querySelectorAll('card');
+    playGameButtonElem.addEventListener("click", () => {
+        startGame();
+
+    });
+};
+
+function startGame(){
+    alert('ola');
+};
+
 function createCard(){
     cardObjectDefinitions.forEach((cardItem)=>{
-        console.log(cardItem);
+        //console.log(cardItem);
         createSingleCard(cardItem);
     });
 };
@@ -69,7 +86,7 @@ function addChildElement(cardContainerElem, cardItem){
 }
 function addCardToGridCell(cardElem){
     const cardPositionClassName = mapCardIdToGridcell(cardElem);
-    console.log(cardPositionClassName);
+    //console.log(cardPositionClassName);
     const cardPosElem = document.querySelector(cardPositionClassName);
 
     //console.log(cardPosElem);
