@@ -27,7 +27,11 @@ function loadGame(){
 };
 
 function startGame(){
-    alert('ola');
+    initializeNewGame()
+};
+
+function initializeNewGame(){
+
 };
 
 function createCard(){
