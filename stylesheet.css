@@ -300,7 +300,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #C9EBF2;
+    background-color: #20f23d;
   }
   nav li {
     margin: 0;
@@ -309,7 +309,7 @@ textarea {
     font-weight: 400;
     font-style: normal;
     display: flex;
-    background-color: #C9EBF2;
+    background-color: #20f23d;
   
   }
   nav a {
@@ -331,6 +331,7 @@ textarea {
   .nav-links {
     display: flex;
     gap: 1rem;
+    font-size: 2em;
   }
   .menu-icon {
     display: none;
@@ -476,7 +477,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #C9EBF2;
+    background-color: #20f23d;
   }
   nav li {
     margin: 0;
@@ -485,7 +486,7 @@ textarea {
     font-weight: 400;
     font-style: normal;
     display: flex;
-    background-color: #C9EBF2;
+    background-color: #20f23d;
   
   }
   nav a {
@@ -507,6 +508,8 @@ textarea {
   .nav-links {
     display: flex;
     gap: 1rem;
+    font-size: 2em;
+
   }
   .menu-icon {
     display: none;
