@@ -8,6 +8,7 @@ const cardObjectDefinitions = [
     {id:5, imgPath: '/images/front-card-5-joker.png'},
     {id:6, imgPath: '/images/front-card-6-pissaladiere.png'},
 ];
+
 let cards = [];
 
 const backCardSrc = '/images/card-back-hunt-the-socca.png';
@@ -113,11 +114,11 @@ function addIdToElement(cardItem, id){
     cardItem.setAttribute("id", id);
 };
 function addSrcToImageElem(imgElem, src){
-    imgElem.src = src;
-}
+    imgElem.src = "/nicefood" + src;
+};
 function addChildElement(cardContainerElem, cardItem){
     cardContainerElem.appendChild(cardItem);
-}
+};
 function addCardToGridCell(cardElem){
     const cardPositionClassName = mapCardIdToGridcell(cardElem);
     //console.log(cardPositionClassName);
