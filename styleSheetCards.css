@@ -35,6 +35,12 @@
     
 }
 
+.card-pos-a, .card-pos-b, .card-pos-c, 
+.card-pos-d, .card-pos-e, .card-pos-f {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 :root{
     --card-width:465px;
     --card-height:465px;
