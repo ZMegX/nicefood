@@ -114,7 +114,7 @@ function addIdToElement(cardItem, id){
     cardItem.setAttribute("id", id);
 };
 function addSrcToImageElem(imgElem, src){
-    imgElem.src = "/nicefood" + src;
+    imgElem.src = src;
 };
 function addChildElement(cardContainerElem, cardItem){
     cardContainerElem.appendChild(cardItem);
