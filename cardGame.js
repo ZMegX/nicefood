@@ -42,6 +42,7 @@ function initializeNewGame(){
 function startRound(){
     initializeNewRound();
     collectCards();
+    flipCards(true);
 };
 
 function initializeNewRound(){
@@ -65,11 +66,35 @@ function addCardsToGridAreaCell(cellPositionClassName){
     });
 };
 
+
+
 function createCard(){
     cardObjectDefinitions.forEach((cardItem)=>{
         //console.log(cardItem);
         createSingleCard(cardItem);
     });
+};
+
+function flipCard(card, flipToBack){
+
+    const cardInner = card.querySelector(".card-inner");
+
+    if(flipToBack && !cardInner.classList.contains('flip-it')){
+        cardInner.classList.add('flip-it')
+    }else if(cardInner.classList.contains('flip-it')){
+        cardInner.classList.remove('flip-it')
+    };
+
+};
+
+function flipCards(flipToBack){
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card, index)=>{
+        setTimeout(() => {
+            flipCard(card, flipToBack)
+        },index * 100)
+    })
 };
 
 function createSingleCard(cardItem){
