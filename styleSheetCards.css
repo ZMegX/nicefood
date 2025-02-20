@@ -47,13 +47,13 @@
   
   }
   
-  /* .card{
+   .card{
     position:absolute;
     height:var(--card-height);
     width:var(--card-width);
     perspective: 1000px;
   
-  } */
+  }
   .card-inner{
     position: relative;
     width:100%;
@@ -72,9 +72,10 @@
     backface-visibility: hidden;
   
   }
-  .card-img{
+.card-img{
     height:100%;
   }
+    /* 
   .card-back{
     transform:rotateY(-180deg);
   
@@ -83,6 +84,8 @@
     transform:rotateY(180deg);
   }
   .card-inner:hover .card-back {
-    transform: rotateY(180deg);  /* Ensure back face is visible when hovering */
-  }
+    transform: rotateY(180deg);  
+  } */
+
+  /* Ensure back face is visible when hovering */
   
