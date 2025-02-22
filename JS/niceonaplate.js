@@ -39,40 +39,29 @@ img.onload = () => {
 };
 
 function draw() {
-  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
-
-  // If image is <= canvas size
-  if (imgW <= canvasXSize) {
-    // Reset, start from beginning
-    if (x > canvasXSize) {
-      x = -imgW + x;
+    ctx.clearRect(0, 0, clearX, clearY); // Clear the canvas
+  
+    // If image is <= canvas size
+    if (imgW <= canvasXSize) {
+      if (x < -imgW) {
+        x = canvasXSize;
+      }
+  
+      if (x < canvasXSize - imgW) {
+        ctx.drawImage(img, x + imgW, y, imgW, imgH);
+      }
+    } else {
+      if (x < -imgW) {
+        x = 0;
+      }
+  
+      if (x < 0) {
+        ctx.drawImage(img, x + imgW - 1, y, imgW, imgH);
+      }
     }
-
-    // Draw additional image1
-    if (x > 0) {
-      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
-    }
-
-    // Draw additional image2
-    if (x - imgW > 0) {
-      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
-    }
-  } else {
-    // Image is > canvas size
-    // Reset, start from beginning
-    if (x > canvasXSize) {
-      x = canvasXSize - imgW;
-    }
-
-    // Draw additional image
-    if (x > canvasXSize - imgW) {
-      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
-    }
+  
+    ctx.drawImage(img, x, y, imgW, imgH);
+  
+    x += dx; // Move left to right
   }
-
-  // Draw image
-  ctx.drawImage(img, x, y, imgW, imgH);
-
-  // Amount to move
-  x += dx;
-}
+  
