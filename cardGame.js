@@ -139,7 +139,7 @@ function returnGridAreasMappedToCardPos() {
     cards.forEach((cardItem, index) => {
         let pos = " ";
 
-        if (cardPositions[index] === 1){
+        if (cardPositions[index] == 1){
             pos === "a";
         } ;
         
