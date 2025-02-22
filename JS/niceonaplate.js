@@ -5,12 +5,12 @@ const img = new Image();
 img.src = "https://i.postimg.cc/X7B0nLmg/Must-Try-Local-Foods-19-02-2025.png";
 const canvasXSize = 800;
 const canvasYSize = 600;
-const speed = 30; // lower is faster
+const speed = 10; // lower is faster
 const scale = 1.05;
 const y = -4.5; // vertical offset
 
 // Main program
-const dx = 0.75;
+const dx = -0.75;
 let imgW;
 let imgH;
 let x = 0;
