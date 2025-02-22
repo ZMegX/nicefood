@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Nice on a plate</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="./styleSheetv2.css">
@@ -21,25 +21,28 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="main.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./foodculturestory.html">Food Culture Story</a>
+            <a class="nav-link" href="./niceonaplate.html">Nice on a plate</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" hidden>
             <a class="nav-link" href="./cardgame.html">Hunt the Socca - A Card game</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./contact.html">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled hidden" aria-disabled="true">Disabled</a>
+          <li class="nav-item" hidden>
+            <a class="nav-link disabled " aria-disabled="true">Disabled</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="container text-center">
+  <canvas id="canvas" width="800" height="200"
+  >A sunset over the Port of Nice</canvas>
+
+  <div class="container text-center p-3">
     <div class="row align-items-center">
       <div class="col">
         <img src="./images/Must-Try-Local-Foods-19-02-2025.png" class="img-fluid" alt="Must-try Local Food">
@@ -47,260 +50,137 @@
     </div>
   </div>
   <div class="container text-center">
-    <div class="row justify-content-around">
-      <div class="col-sm-12 col-md-4 col-lg-4 p-3">
-        One of two columns
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4 p-3">
-        One of two columns
-      </div>
-    </div>
-  </div>
-  <div class="container text-center">
     <div class="row">
         <div class="col-sm-6 mb-3 mb-sm-0 col-lg-3 p-3">
           <div class="card">
-            <img src="./images/castel-beach.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Nissart Salad</h5>
-              <p class="card-text">It's a starter or a main plate</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
-                Where to eat
-              </button>
-              <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="modal1Label">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      hello world
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 mb-3 mb-sm-0 col-lg-3 p-3">
-          <div class="card">
-            <img src="./images/castel-beach.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Socca</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
-                Where to eat
-              </button>
-              <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="modal2Label">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      hello world
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 mb-3 mb-sm-0 col-lg-3 p-3">
-          <div class="card">
-            <img src="./images/castel-beach.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Pissaladiere</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
-                Where to eat
-              </button>
-              <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="modal3Label">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      hello world
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 mb-3 mb-sm-0 col-lg-3 p-3">
-          <div class="card">
-            <img src="./images/castel-beach.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Ratatouille</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">
-                Where to eat
-              </button>
-              <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="modal4Label">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      hello world
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 mb-3 mb-sm-0 col-lg-3 p-3">
-          <div class="card">
-            <img src="./images/castel-beach.jpg" class="card-img-top" alt="...">
+            <img src="./images/panbagnat.jpg" class="card-img-top" alt="Pan-Bagnat">
             <div class="card-body">
               <h5 class="card-title">Pan-Bagnat</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal5">
-                Where to eat
-              </button>
-              <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="modal5Label">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      hello world
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <p class="card-text">Old local sandwich</p>
+              <a href="https://maps.app.goo.gl/SjUQfRVnEcoh7FAd9" class="btn btn-secondary btn-lg" role="button" aria-disabled="true">Where to eat</a>
             </div>
           </div>
         </div>
 
         <div class="col-sm-6 mb-3 mb-sm-0 col-lg-3 p-3">
           <div class="card">
-            <img src="./images/castel-beach.jpg" class="card-img-top" alt="...">
+            <img src="./images/socca-chezpipo.jpg" class="card-img-top" alt="Socca cooking in the oven at Chez Pipo">
             <div class="card-body">
-              <h5 class="card-title">Petits-farcis</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal6">
-                Where to eat
-              </button>
-              <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="modal6Label">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      hello world
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h5 class="card-title">Socca</h5>
+              <p class="card-text">Chickpeas waffle</p>
+              <a href="https://maps.app.goo.gl/6MHNhJ7annZzZzSr6" class="btn btn-secondary btn-lg" role="button" aria-disabled="true">Where to eat</a>
             </div>
           </div>
         </div>
 
         <div class="col-sm-6 mb-3 mb-sm-0 col-lg-3 p-3">
           <div class="card">
-            <img src="./images/castel-beach.jpg" class="card-img-top" alt="...">
+            <img src="./images/dauba-nissarda.JPG" class="card-img-top" alt="Dauba nissarda from grandma">
             <div class="card-body">
-              <h5 class="card-title">Dauba Nissarda</h5>
-              <p class="card-text">This dish is one of the star dish from Nice, it's eaten with gnocchis</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal7">
-                Where to eat
-              </button>
-              <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modalLabel7" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="modalLabel7">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      hello world
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h5 class="card-title">Dauba Nissard</h5>
+              <p class="card-text">Slowcooked beef with wine.</p>
+              <a href="https://maps.app.goo.gl/fCeRo23jBPZ5U4o19" class="btn btn-secondary btn-lg" role="button" aria-disabled="true">Where to eat</a>
             </div>
           </div>
         </div>
 
         <div class="col-sm-6 mb-3 mb-sm-0 col-lg-3 p-3">
           <div class="card">
-            <img src="./images/castel-beach.jpg" class="card-img-top" alt="...">
+            <img src="./images/tapenade.jpg" class="card-img-top" alt="Tapenade with focaccia bread around">
             <div class="card-body">
-              <h5 class="card-title">Tourta di Blea, Chard pie</h5>
-              <p class="card-text">One of the typical dessert</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal8">
-                Where to eat
-              </button>
-              <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="modal8Label">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      You can find this pie in almost every bakeries
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h5 class="card-title">Tapenade</h5>
+              <p class="card-text">Tapas</p>
+              <a href="https://maps.app.goo.gl/cVoMCXejRJry1hR18" class="btn btn-secondary btn-lg" role="button" aria-disabled="true">Where to eat</a>
             </div>
           </div>
         </div>
-
       </div>
 </div>
+  <div class="card-footer text-body-secondary text-center p-3">
+    MGX all rights reserved
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    const img = new Image();
+
+// User Variables - customize these to change the image being scrolled, its
+// direction, and the speed.
+img.src = "https://i.postimg.cc/Bv6N1m7h/portdenice.jpg";
+const canvasXSize = 800;
+const canvasYSize = 200;
+const speed = 30; // lower is faster
+const scale = 1.05;
+const y = -4.5; // vertical offset
+
+// Main program
+const dx = 0.75;
+let imgW;
+let imgH;
+let x = 0;
+let clearX;
+let clearY;
+let ctx;
+
+img.onload = () => {
+  imgW = img.width * scale;
+  imgH = img.height * scale;
+
+  if (imgW > canvasXSize) {
+    // Image larger than canvas
+    x = canvasXSize - imgW;
+  }
+
+  // Check if image dimension is larger than canvas
+  clearX = Math.max(imgW, canvasXSize);
+  clearY = Math.max(imgH, canvasYSize);
+
+  // Get canvas context
+  ctx = document.getElementById("canvas").getContext("2d");
+
+  // Set refresh rate
+  return setInterval(draw, speed);
+};
+
+function draw() {
+  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
+
+  // If image is <= canvas size
+  if (imgW <= canvasXSize) {
+    // Reset, start from beginning
+    if (x > canvasXSize) {
+      x = -imgW + x;
+    }
+
+    // Draw additional image1
+    if (x > 0) {
+      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+    }
+
+    // Draw additional image2
+    if (x - imgW > 0) {
+      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+    }
+  } else {
+    // Image is > canvas size
+    // Reset, start from beginning
+    if (x > canvasXSize) {
+      x = canvasXSize - imgW;
+    }
+
+    // Draw additional image
+    if (x > canvasXSize - imgW) {
+      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+    }
+  }
+
+  // Draw image
+  ctx.drawImage(img, x, y, imgW, imgH);
+
+  // Amount to move
+  x += dx;
+}
+
+  </script>
 </body>
 </html>
